@@ -6,7 +6,7 @@ require 'pp'
 require 'sequel'
 
 # Database setup
-DB = Sequel.connect(ENV['DATABASE_URL'] || 'sqlite://tfa.db')
+DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://postgres@localhost/gillard')#'sqlite://tfa.db')
 DB.create_table? :tweets do
   primary_key :id
   String :content

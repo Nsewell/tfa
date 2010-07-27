@@ -1,3 +1,5 @@
+haml
 sinatra
 twitter
+pp
 sequel --version '>= 3.6.0'
