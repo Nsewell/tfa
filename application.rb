@@ -6,7 +6,7 @@ require 'haml'
 require 'sequel'
 
 # Database setup
-DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://localhost/gillard')#'sqlite://tfa.db')
+DB = Sequel.connect(ENV['DATABASE_URL'] || 'postgres://postgres:password@localhost/gillard')#'sqlite://tfa.db')
 DB.create_table? :tweets do
   primary_key :id
   String :content
@@ -54,7 +54,7 @@ get '/' do
       @results << item[:content].gsub(/^@\w[a-z]+\s/, '').
                                 gsub(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/i, '<a href="\1">\1</a>').
                                 gsub(/(@\w[a-z]+)(\s|\S)/i, '<a href="http://twitter.com/\1">\1</a>').
-                                gsub(/(Tony Abbott\W?)/i, '<strong>\1</strong>').
+                                gsub(/(Julia Gillard\W?)/i, '<strong>\1</strong>').
                                 gsub(/(fuck\W|fucking\W|fucked\W|shit\W)/i, '<em>\1</em>')
     else
       puts "This was blacklisted: #{item[:content]}"
