@@ -1,4 +1,5 @@
 rdiscount --version=1.3.5
+haml --version '>= 2.2.0'
 sinatra
 twitter
 sequel --version '>= 3.6.0'
