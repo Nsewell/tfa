@@ -15,15 +15,9 @@ end
 tweets = DB[:tweets]
 
 # reset stylesheet
-get '/stylesheets/reset.css' do
+get '/stylesheets/:sheet.css' do
   header 'Content-Type' => 'text/css; charset=utf-8'
-  css :reset
-end
-
-# main stylesheet
-get '/stylesheets/main.css' do
-  header 'Content-Type' => 'text/css; charset=utf-8'
-  css :main
+  css params[:sheet]
 end
 
 # homepage
@@ -34,7 +28,7 @@ get '/' do
 
   # load all the new tweets into the DB
   while true do
-    @search = Twitter::Search.new('"tony abbott" fuck OR fucking OR fucked OR shit')
+    @search = Twitter::Search.new('"julia gillard" fuck OR fucking OR fucked OR shit')
     # 20 per page - twitter docs say 100, but seems to be less, so we
     # cover our bases for pagination. this pagination method also leaves
     # a small possibility of duplicates, but it's not a big deal.
