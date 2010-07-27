@@ -1,6 +1,7 @@
 /****
-Tony Fucking Abbott!
+Based on Tony Fucking Abbott!
 http://tonyfuckingabbott.com
+http://juliafuckinggillard.heroku.com/
 20091201
 
 TOC
@@ -38,13 +39,11 @@ TOC
     	body.home h3,
     	body.event h2.date {font-size: 1.143em;}	
  
-
-
 /* - =Structure - */
 body {background: #0f0f0f; color: #fefefe; font: 62.5%/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;}
 
 #wrapper {border: 0.2em solid #fff; border-top: 0; border-bottom: 0; font-size: 1.6em; margin: 0 auto 0 auto; position: relative; width: 470px;}
-    h1 {background: #0f0f0f url(images/tony-fucking-abbott.png) no-repeat 0 0; margin: 0; text-indent: -9999px;}
+    h1 {background: #0f0f0f url(images/julia-fucking-gillard.png) no-repeat 0 0; margin: 0; text-indent: -9999px;}
         h1 a {display: block; min-height: 270px;}
         p {font-size: 0.9em; margin: 0 auto 1em auto; width: 380px;}
             p em {font-style: italic;}
